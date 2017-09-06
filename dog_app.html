@@ -11816,7 +11816,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_files</span>       
@@ -11894,7 +11894,7 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -11944,7 +11944,7 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>                
@@ -13406,6 +13406,17 @@ hX0gu3AWF3ZhF/aB7MJZXNiFXdgHsgtncWEXdmEfyC6cxYVd2IV9ILtwFhd2YRf2gez/BxgnxEZY
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
 <p><strong>Answer:</strong></p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Is it a reasonable exception of the user to pose facing the camera? I would argue possibly. If the experience is in the context of performing and presenting some analysis on the face within a single interaction then yes, they'll be interacting with the touch-point at the time and would definitely improve results. In the context of observation or something more passive, i.e. no explicit interaction, then you would need to work with what you have in which case a CNN would be a good candidate as the alternative approach given that it's now possible for object recognition performed on a computer surpasses that of what can be achieved by a person. <a href="https://www.forbes.com/sites/michaelthomsen/2015/02/19/microsofts-deep-learning-project-outperforms-humans-in-image-recognition/">https://www.forbes.com/sites/michaelthomsen/2015/02/19/microsofts-deep-learning-project-outperforms-humans-in-image-recognition/</a></p>
+<p>Below is an initial attempt at creating a CNN to perform dog-face classification; the results are presented below for comparison with the above approach. Admittely the dataset wasn't properly separated into train, validate, and test but a worthwhile exercise in exploring NN for the task of classification dogs and people.</p>
 
 </div>
 </div>
@@ -16429,7 +16440,7 @@ q4x1T3rbvgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="k">import</span> <span class="n">ImageDataGenerator</span>
@@ -18496,7 +18507,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing</span> <span class="k">import</span> <span class="n">image</span>                  
@@ -18534,7 +18545,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.applications.resnet50</span> <span class="k">import</span> <span class="n">preprocess_input</span><span class="p">,</span> <span class="n">decode_predictions</span>
@@ -18700,7 +18711,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">ImageFile</span>                            
@@ -18724,9 +18735,9 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 6680/6680 [01:57&lt;00:00, 56.73it/s]
-100%|██████████| 835/835 [00:13&lt;00:00, 60.62it/s]
-100%|██████████| 836/836 [00:13&lt;00:00, 61.74it/s]
+<pre>100%|██████████| 6680/6680 [02:11&lt;00:00, 50.85it/s]
+100%|██████████| 835/835 [00:15&lt;00:00, 54.92it/s]
+100%|██████████| 836/836 [00:14&lt;00:00, 56.39it/s]
 </pre>
 </div>
 </div>
@@ -18786,14 +18797,25 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">GlobalAveragePooling2D</span><span class="p">,</span> <span class="n">Activation</span>
 <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">create_dog_breed_classifier_network</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">output_shape</span><span class="o">=</span><span class="mi">133</span><span class="p">):</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_dog_breed_classifier_network</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">output_shape</span><span class="o">=</span><span class="mi">133</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a network for classifying the breed of a dog</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -18886,6 +18908,31 @@ _________________________________________________________________
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Outline the steps you took to get to your final CNN architecture and your reasoning at each step</strong><br>
+The network is based on the network used on <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html">https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html</a> (initial network and approached used in one of the previous questions). The steps followed were essentially:</p>
+<ul>
+<li>Create base network (with 2 layers of CNNs) </li>
+<li>Run and monitor loss </li>
+<li>Stop </li>
+<li>Tweak dropout (parameter was incorrect, inverse) </li>
+<li>Run and monitor loss </li>
+<li>Add another layer of CNN and increased width </li>
+<li>Run and observe loss and accuracy</li>
+<li>Stop </li>
+<li>Tweak width of dense layer </li>
+<li>Tweak dropout</li>
+<li>Run and observe loss and accuracy</li>
+</ul>
+<p>You could summarise my steps/process as 'random exploration' or 'experimentation'.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -19413,6 +19460,15 @@ test_{network} = bottleneck_features['test']</code></pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DogResnet50Data">DogResnet50Data<a class="anchor-link" href="#DogResnet50Data">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[57]:</div>
@@ -19443,6 +19499,24 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Initially the architecture I used was <strong>ResNet-50</strong> for the only reason that I was (and am) travelling on work at time of working on this assignment, I was at a airport with poor connectivity, <strong>ResNet-50</strong> being the smallest meant it was my only option.</p>
+<p>I have now extended this to include additional architectures (results shown below) including:</p>
+<ul>
+<li>ResNet-50 (accuracy ~82%)</li>
+<li>Xception (accuracy ~85%)</li>
+<li>InceptionV2 (accuracy ~81%) </li>
+</ul>
+<p>I tried experimenting with the classifer with <strong>Xception</strong> but was discouraged with poor results with my attempts of adding additional layers (1 'experiment' shown below). Adding regularization (dropout) also added little value.</p>
+<p>Regarding the question 'why you think the architecture is suitable for the current problem'; the architecture consists of a network/model used to classify 1000 objects. Through-out the layers, this model builds increasing levels of abstraction. This, in effect, simplifies our problem down to, for example, 2048 features - essentially we leverage a sophisticated that has been trained on a huge dataset on powerful computers to <em>better understand</em> the image, and this this high level abstraction, if you will, to classify dogs breeds.</p>
 
 </div>
 </div>
@@ -19706,6 +19780,420 @@ Epoch 20/20
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Xception">Xception<a class="anchor-link" href="#Xception">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>  
+
+<span class="c1">### TODO: Obtain bottleneck features from another pre-trained CNN.</span>
+<span class="n">bottleneck_features_file</span> <span class="o">=</span> <span class="s2">&quot;bottleneck_features/DogXceptionData.npz&quot;</span>
+<span class="n">bottleneck_features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">bottleneck_features_file</span><span class="p">)</span>
+<span class="n">train_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
+<span class="n">valid_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span>
+<span class="n">test_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+
+<span class="c1">### TODO: Define your architecture.</span>
+<span class="n">tl_model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">GlobalAveragePooling2D</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="n">train_tl</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1">### TODO: Compile the model.</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+
+<span class="c1">### TODO: Train the model.</span>
+<span class="n">checkpointer</span> <span class="o">=</span> <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;saved_models/weights.best.tl_b.hdf5&#39;</span><span class="p">,</span> 
+                               <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                               <span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_tl</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> 
+             <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">valid_tl</span><span class="p">,</span> <span class="n">valid_targets</span><span class="p">),</span>
+             <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+             <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">### TODO: Calculate classification accuracy on the test dataset.</span>
+<span class="c1"># get index of predicted dog breed for each image in test set</span>
+<span class="n">tl_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">tl_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)))</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">test_tl</span><span class="p">]</span>
+
+<span class="c1"># report test accuracy</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">test_targets</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+global_average_pooling2d_3 ( (None, 2048)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 133)               272517    
+=================================================================
+Total params: 272,517.0
+Trainable params: 272,517.0
+Non-trainable params: 0.0
+_________________________________________________________________
+Epoch 00000: val_loss improved from inf to 0.57790, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00001: val_loss improved from 0.57790 to 0.50812, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00002: val_loss improved from 0.50812 to 0.45484, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00003: val_loss did not improve
+Epoch 00004: val_loss did not improve
+Epoch 00005: val_loss did not improve
+Epoch 00006: val_loss did not improve
+Epoch 00007: val_loss did not improve
+Epoch 00008: val_loss did not improve
+Epoch 00009: val_loss did not improve
+Epoch 00010: val_loss did not improve
+Epoch 00011: val_loss did not improve
+Epoch 00012: val_loss did not improve
+Epoch 00013: val_loss did not improve
+Epoch 00014: val_loss did not improve
+Epoch 00015: val_loss did not improve
+Epoch 00016: val_loss did not improve
+Epoch 00017: val_loss did not improve
+Epoch 00018: val_loss did not improve
+Epoch 00019: val_loss did not improve
+Test accuracy: 85.4067%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>  
+
+<span class="c1">### TODO: Obtain bottleneck features from another pre-trained CNN.</span>
+<span class="n">bottleneck_features_file</span> <span class="o">=</span> <span class="s2">&quot;bottleneck_features/DogXceptionData.npz&quot;</span>
+<span class="n">bottleneck_features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">bottleneck_features_file</span><span class="p">)</span>
+<span class="n">train_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
+<span class="n">valid_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span>
+<span class="n">test_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+
+<span class="c1">### TODO: Define your architecture.</span>
+<span class="n">tl_model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">GlobalAveragePooling2D</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="n">train_tl</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1">### TODO: Compile the model.</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+
+<span class="c1">### TODO: Train the model.</span>
+<span class="n">checkpointer</span> <span class="o">=</span> <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;saved_models/weights.best.tl_b.hdf5&#39;</span><span class="p">,</span> 
+                               <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                               <span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_tl</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> 
+             <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">valid_tl</span><span class="p">,</span> <span class="n">valid_targets</span><span class="p">),</span>
+             <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+             <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">### TODO: Calculate classification accuracy on the test dataset.</span>
+<span class="c1"># get index of predicted dog breed for each image in test set</span>
+<span class="n">tl_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">tl_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)))</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">test_tl</span><span class="p">]</span>
+
+<span class="c1"># report test accuracy</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">test_targets</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+global_average_pooling2d_4 ( (None, 2048)              0         
+_________________________________________________________________
+dense_7 (Dense)              (None, 512)               1049088   
+_________________________________________________________________
+dense_8 (Dense)              (None, 133)               68229     
+=================================================================
+Total params: 1,117,317.0
+Trainable params: 1,117,317.0
+Non-trainable params: 0.0
+_________________________________________________________________
+Epoch 00000: val_loss improved from inf to 0.69450, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00001: val_loss improved from 0.69450 to 0.66733, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00002: val_loss improved from 0.66733 to 0.57849, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00003: val_loss improved from 0.57849 to 0.56805, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00004: val_loss did not improve
+Epoch 00005: val_loss did not improve
+Epoch 00006: val_loss did not improve
+Epoch 00007: val_loss did not improve
+Epoch 00008: val_loss did not improve
+Epoch 00009: val_loss did not improve
+Epoch 00010: val_loss did not improve
+Epoch 00011: val_loss did not improve
+Epoch 00012: val_loss did not improve
+Epoch 00013: val_loss did not improve
+Epoch 00014: val_loss did not improve
+Epoch 00015: val_loss did not improve
+Epoch 00016: val_loss did not improve
+Epoch 00017: val_loss did not improve
+Epoch 00018: val_loss did not improve
+Epoch 00019: val_loss did not improve
+Test accuracy: 82.1770%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>  
+
+<span class="c1">### TODO: Obtain bottleneck features from another pre-trained CNN.</span>
+<span class="n">bottleneck_features_file</span> <span class="o">=</span> <span class="s2">&quot;bottleneck_features/DogXceptionData.npz&quot;</span>
+<span class="n">bottleneck_features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">bottleneck_features_file</span><span class="p">)</span>
+<span class="n">train_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
+<span class="n">valid_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span>
+<span class="n">test_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+
+<span class="c1">### TODO: Define your architecture.</span>
+<span class="n">tl_model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">GlobalAveragePooling2D</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="n">train_tl</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1">### TODO: Compile the model.</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+
+<span class="c1">### TODO: Train the model.</span>
+<span class="n">checkpointer</span> <span class="o">=</span> <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;saved_models/weights.best.tl_b.hdf5&#39;</span><span class="p">,</span> 
+                               <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                               <span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_tl</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> 
+             <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">valid_tl</span><span class="p">,</span> <span class="n">valid_targets</span><span class="p">),</span>
+             <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+             <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">### TODO: Calculate classification accuracy on the test dataset.</span>
+<span class="c1"># get index of predicted dog breed for each image in test set</span>
+<span class="n">tl_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">tl_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)))</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">test_tl</span><span class="p">]</span>
+
+<span class="c1"># report test accuracy</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">test_targets</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+global_average_pooling2d_6 ( (None, 2048)              0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 2048)              0         
+_________________________________________________________________
+dense_10 (Dense)             (None, 133)               272517    
+=================================================================
+Total params: 272,517.0
+Trainable params: 272,517.0
+Non-trainable params: 0.0
+_________________________________________________________________
+Epoch 00000: val_loss improved from inf to 0.54764, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00001: val_loss improved from 0.54764 to 0.48892, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00002: val_loss improved from 0.48892 to 0.46275, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00003: val_loss did not improve
+Epoch 00004: val_loss did not improve
+Epoch 00005: val_loss improved from 0.46275 to 0.45644, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00006: val_loss did not improve
+Epoch 00007: val_loss did not improve
+Epoch 00008: val_loss did not improve
+Epoch 00009: val_loss did not improve
+Epoch 00010: val_loss did not improve
+Epoch 00011: val_loss did not improve
+Epoch 00012: val_loss did not improve
+Epoch 00013: val_loss did not improve
+Epoch 00014: val_loss did not improve
+Epoch 00015: val_loss did not improve
+Epoch 00016: val_loss did not improve
+Epoch 00017: val_loss did not improve
+Epoch 00018: val_loss did not improve
+Epoch 00019: val_loss did not improve
+Test accuracy: 85.1675%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DogInceptionV3Data">DogInceptionV3Data<a class="anchor-link" href="#DogInceptionV3Data">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>  
+
+<span class="c1">### TODO: Obtain bottleneck features from another pre-trained CNN.</span>
+<span class="n">bottleneck_features_file</span> <span class="o">=</span> <span class="s2">&quot;bottleneck_features/DogInceptionV3Data.npz&quot;</span>
+<span class="n">bottleneck_features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">bottleneck_features_file</span><span class="p">)</span>
+<span class="n">train_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
+<span class="n">valid_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span>
+<span class="n">test_tl</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+
+<span class="c1">### TODO: Define your architecture.</span>
+<span class="n">tl_model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">GlobalAveragePooling2D</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="n">train_tl</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1">### TODO: Compile the model.</span>
+<span class="n">tl_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+
+<span class="c1">### TODO: Train the model.</span>
+<span class="n">checkpointer</span> <span class="o">=</span> <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;saved_models/weights.best.tl_b.hdf5&#39;</span><span class="p">,</span> 
+                               <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                               <span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">tl_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_tl</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> 
+             <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">valid_tl</span><span class="p">,</span> <span class="n">valid_targets</span><span class="p">),</span>
+             <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+             <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">### TODO: Calculate classification accuracy on the test dataset.</span>
+<span class="c1"># get index of predicted dog breed for each image in test set</span>
+<span class="n">tl_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">tl_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)))</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">test_tl</span><span class="p">]</span>
+
+<span class="c1"># report test accuracy</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">test_targets</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tl_predictions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+global_average_pooling2d_5 ( (None, 2048)              0         
+_________________________________________________________________
+dense_9 (Dense)              (None, 133)               272517    
+=================================================================
+Total params: 272,517.0
+Trainable params: 272,517.0
+Non-trainable params: 0.0
+_________________________________________________________________
+Epoch 00000: val_loss improved from inf to 0.64270, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00001: val_loss improved from 0.64270 to 0.60582, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00002: val_loss did not improve
+Epoch 00003: val_loss improved from 0.60582 to 0.59713, saving model to saved_models/weights.best.tl_b.hdf5
+Epoch 00004: val_loss did not improve
+Epoch 00005: val_loss did not improve
+Epoch 00006: val_loss did not improve
+Epoch 00007: val_loss did not improve
+Epoch 00008: val_loss did not improve
+Epoch 00009: val_loss did not improve
+Epoch 00010: val_loss did not improve
+Epoch 00011: val_loss did not improve
+Epoch 00012: val_loss did not improve
+Epoch 00013: val_loss did not improve
+Epoch 00014: val_loss did not improve
+Epoch 00015: val_loss did not improve
+Epoch 00016: val_loss did not improve
+Epoch 00017: val_loss did not improve
+Epoch 00018: val_loss did not improve
+Epoch 00019: val_loss did not improve
+Test accuracy: 81.4593%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Predict-Dog-Breed-with-the-Model">(IMPLEMENTATION) Predict Dog Breed with the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Predict-Dog-Breed-with-the-Model">&#182;</a></h3><p>Write a function that takes an image path as input and returns the dog breed (<code>Affenpinscher</code>, <code>Afghan_hound</code>, etc) that is predicted by your model.</p>
 <p>Similar to the analogous function in Step 5, your function should have three steps:</p>
 <ol>
@@ -19802,6 +20290,21 @@ Epoch 20/20
 <h3 id="(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">(IMPLEMENTATION) Test Your Algorithm on Sample Images!<a class="anchor-link" href="#(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">&#182;</a></h3><p>Test your algorithm at least six images on your computer.  Feel free to use any images you like.  Use at least two human and two dog images.</p>
 <p><strong>Question 6:</strong> Is the output better than you expected :) ?  Or worse :( ?  Provide at least three possible points of improvement for your algorithm.</p>
 <p><strong>Answer:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Not sure if I look like a Havanese but it accurately classified each of the breeds and identified faces within the image so it performed better than I expected. Some ideas of improving the architecture include:</p>
+<ul>
+<li>Introduce regularization to avoid overfitting </li>
+<li>Add noise or variance to the dataset (such as flipping and rotating the image) to, potentially, increase the changes of the model generalising. As described here - <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html">https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html</a></li>
+<li>(Taken from suggestions offered by the projects rubrics) Add additional logic when performing prediction such that it highlights ambiguity in the prediction i.e. when 2 breeds have similar probabilities.</li>
+</ul>
 
 </div>
 </div>
